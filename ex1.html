@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #333;
+        }
+        #paper{
+            height: 600px;
+            width: 1000px;
+            border: 20px solid white;
+            background-color: #222;
+            position: relative;
+            perspective: 1000px;
+        }
+        #paper .seg{
+            height: 600px;
+            width: 200px;
+            /* border:1px solid yellow; */
+            position: absolute;
+            top: 0;
+            background-image: url(town.jpg);
+        }
+        #paper .seg:nth-child(2){
+            left:150px;
+            background-position: -200px 0;
+            transform: scale(1.05) rotateY(-30deg);
+        }
+        #paper .seg:nth-child(3){
+            left: 330px;
+            background-position: -400px 0;
+            transform:scale(1.05) rotateY(30deg);
+        }
+        #paper .seg:nth-child(4){
+            left: 510px;
+            background-position: -600px 0;
+            transform: scale(1.05) rotateY(-30deg);
+        }
+        #paper .seg:nth-child(5){
+            left: 690px;
+            background-position: -800px 0;
+            transform:scale(1.05) rotateY(30deg);
+        }
+        #paper .seg:nth-child(3) .shadow{
+            /* background-color: #fff; */
+            height: 600px;
+            width: 200px;
+            background-image: linear-gradient(to left,#0007,#0000)
+        }
+        #paper .seg:nth-child(4) .shadow{
+            height: 600px;
+            width: 200px;
+            background-image: linear-gradient(to left,#0000,#0007)
+
+        }
+    </style>
+</head>
+<!-- pentru acasa de facut seg 1,2,5 semi transparent alb -->
+<body>
+    <div id="paper">
+        <div class="seg"></div>
+        <div class="seg"></div>
+        <div class="seg">
+            <div class="shadow"></div>
+        </div>
+        <div class="seg">
+            <div class="shadow"></div>
+        </div>
+        <div class="seg"></div>
+    </div>
+</body>
+</html>
